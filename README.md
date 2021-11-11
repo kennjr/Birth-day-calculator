@@ -4,7 +4,7 @@
 ## Description
 This is a simple web application that performs the simple task of calculating the day someone was born with exceptional accuracy.
 ## Setup/Installation Requirements
-* Clone the repo :{git clone https://github.com/kennjr/Birth-day-calculator.git}
+* Clone the repo :{ git clone https://github.com/kennjr/Birth-day-calculator.git }
 * No server or dependencies needed to run the code.
 ## Live link
 Not yet available, should be ready by 11/12/2021

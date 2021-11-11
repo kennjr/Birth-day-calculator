@@ -1,14 +1,21 @@
 .button_class > button{
-    color: white;
     width: 40%;
     height: 40px;
-    background: transparent;
     text-align: center;
-    background-color: orangered;
     border-radius: 7px;
     margin: 10px;
     align-content: center;
     flex-direction: row-reverse;
+}
+
+.submit_btn {
+    color: white;
+    background-color: orangered;
+}
+
+.reset_btn {
+    color: black;
+    background-color: white;
 }
 
 .flex_container{
