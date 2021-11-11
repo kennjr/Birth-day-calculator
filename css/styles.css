@@ -1,0 +1,59 @@
+.button_class > button{
+    color: white;
+    width: 30%;
+    height: 40px;
+    background: transparent;
+    text-align: center;
+    background-color: orangered;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.flex_container{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    gap: 2rem;
+}
+
+.gender_id {
+    display: inline-block;
+    width: 100%;
+}
+
+.form_section {
+    background: lightgray;
+    flex: 10;
+    border: 1.5px solid #111;
+    border-radius: 10px;
+    display: flexbox;
+    flex-direction: column;
+}
+
+.form_section > h3{
+    text-align: center;
+}
+
+.details_section {
+    /* background: chartreuse; */
+    flex: 7;
+    border: 1.5px solid transparent;
+    border-radius: 1px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid gray;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+  
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth day calculator</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body>
+    <div class="flex_container">
+        <div class="form_section">
+            <h3>Find out the exact day you were born</h3>
+            <div id="username_id">
+                <input type="text" placeholder="Name">
+            </div>
+            <div id="date_of_birth_id">
+                <label for="birthday">Birthday:</label>
+                <input type="date" name="birthday" id="user_birth_date" required>
+            </div>
+            <div id="gender_id">
+                <form class="genders_form" action="gender">
+                    <input type="radio" name="gender" checked id="m_gender_id" value="male"> 
+                    <label for="Male">Male</label><br>
+                    <input type="radio" name="gender" id="f_gender_id" value="female">
+                    <label for="Female">Female</label><br>
+                    <input type="radio" name="gender" id="n_gender_id" value="non-binary">
+                    <label for="Non-binary">Non-binary</label><br>
+                </form>
+            </div>
+            <div class="button_class" id="btn_id">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+        <div class="details_section">
+            <p>This is for testing the layout</p>
+        </div>
+    </div>
+</body>
+</html>
