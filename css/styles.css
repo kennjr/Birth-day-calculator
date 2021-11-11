@@ -18,6 +18,11 @@
     background-color: white;
 }
 
+/* These are styling opts for pcs */
+button:hover{
+    background: lightgray;
+}
+
 .flex_container{
     display: flex;
     height: 80vh;

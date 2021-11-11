@@ -10,16 +10,19 @@ var submitDetails = () => {
     }else if(gender == ""){
         alert("The gender field is empty.")
     }else{
-        calcualteBirth(username, birthdate, gender);
+        // getDayOfBirth(dateOfBirth);
+        calcualteBirth(username, dateOfBirth, gender)
     }
 }
 
 var calcualteBirth = (name, birthdate, gender) => {
+    
     getDayOfBirth(birthdate);
 }
 
 //This fun will give us the day of the week when the user was born based on the date given as an argument
-var getDayOfBirth = (birthdate) => {
+var getDayOfBirth = function (birthdate) {
+    console.log("We're calculating the day...");
     /*
     // Day of the week (d) = (((CC/4) -2*CC-1) + ((5*YY/4)) + ((26*(MM+1)/10)) + DD ) mod 7
     CC = century eg 19, 18, 17, 20 etc (the first 2 digits of the yyyy)
@@ -28,17 +31,30 @@ var getDayOfBirth = (birthdate) => {
     DD = day
     */
     //We gon convert the string date to the required date format, we make it constant because we don't intend to change it
-    const date = new Date(birthdate);
-    const yyyy = date.getFullYear()
-    const mm = date.getMonth()
-    const dd = date.getDay()
+    var date = new Date(birthdate);
+    var yyyy = date.getFullYear();
+    var mm = date.getMonth();
+    var dd = date.getDay();
 
+    // console.log("the date is " dd + "");
     //We gon slice the yyyy for us to get the cc and yy
-    const cc = parseInt(yyyy.toString().slice(0,1));
-    const yy = parseInt(yyyy.toString().slice(2,3));
+    var cc = parseInt(yyyy.toString().slice(0,2));
+    var yy = parseInt(yyyy.toString().slice(2,4));
 
-    let day = (((cc/4) -2*cc-1) + ((5*yy/4)) + ((26*(mm+1)/10)) + dd) % 7;
-    alert("This user was born on the " + day + " day.")
+    console.log("cc is ", cc + " yy is ", yy);
+
+    // var day = (((cc/4) -2*cc-1) + ((5*yy/4)) + ((26*(mm+1)/10)) + dd) % 7;
+
+    const weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    let day = weekday[date.getDay()];
+    alert("This user was born on the " + day + " day.");
     
 }
 
