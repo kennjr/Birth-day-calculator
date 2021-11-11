@@ -18,15 +18,15 @@
                 <label for="birthday">Birthday:</label>
                 <input type="date" name="birthday" id="user_birth_date" required>
             </div>
-            <div id="gender_id">
-                <form class="genders_form" action="gender">
-                    <input type="radio" name="gender" checked id="m_gender_id" value="male"> 
-                    <label for="Male">Male</label><br>
-                    <input type="radio" name="gender" id="f_gender_id" value="female">
-                    <label for="Female">Female</label><br>
-                    <input type="radio" name="gender" id="n_gender_id" value="non-binary">
-                    <label for="Non-binary">Non-binary</label><br>
-                </form>
+            <div id="gender_id" class="gender_container">
+                <label for="Gender">Gender : </label>
+                <select name="genders_list" id="genders_list">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="non_binary">Non-binary</option>
+                    
+                </select>
+                    
             </div>
             <div class="button_class" id="btn_id">
                 <button type="submit">Submit</button>
