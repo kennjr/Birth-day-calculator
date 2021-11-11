@@ -1,15 +1,27 @@
-var getName = () => {
+var submitDetails = () => {
     // let username = document.getElementById("username_edt").value;
     let username = getValue("username_edt");
     let dateOfBirth = getValue("user_birth_date");
     let gender = getValue("genders_list");
-    alert("The username is "+ username + " and the DOB is " +dateOfBirth + " and gender is " + gender);
+    if(username == ""){
+        alert("The name field is empty.")
+    }else if(dateOfBirth == ""){
+        alert("The birthdate field is empty.")
+    }else if(gender == ""){
+        alert("The gender field is empty.")
+    }else{
+
+    }
+}
+
+var calcualteBirth = (name, birthdate, gender) => {
+
 }
 
 // This is the method that we'll use to get all the details from the form
 var getValue = (element_id) => {
     let the_value = document.getElementById(element_id).value;
-    return the_value;
+    return the_value.toString().trim();
 }
 
 var clearForm = () => {
