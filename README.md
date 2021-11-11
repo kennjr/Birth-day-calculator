@@ -15,5 +15,5 @@ This project uses HTML and CSS for most of the front-end plus Javascript for the
 ## Support and contact details
 If you run into any issues with the code you can contribute to the project, reporting the issue and probably suggesting a fix.
 ### License
-This software is under the [MIT](LICENSE) license
+This software is under the [MIT](LICENSE) license.
 Copyright (c) {2021} 
