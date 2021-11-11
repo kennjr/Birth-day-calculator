@@ -1,12 +1,14 @@
 .button_class > button{
     color: white;
-    width: 30%;
+    width: 40%;
     height: 40px;
     background: transparent;
     text-align: center;
     background-color: orangered;
-    border-radius: 5px;
+    border-radius: 7px;
     margin: 10px;
+    align-content: center;
+    flex-direction: row-reverse;
 }
 
 .flex_container{
@@ -23,15 +25,25 @@
 
 .form_section {
     background: lightgray;
-    flex: 10;
+    flex: 5;
     border: 1.5px solid #111;
     border-radius: 10px;
     display: flexbox;
-    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 
 .form_section > h3{
     text-align: center;
+}
+/* This is for moving the btn to the center */
+.form_section > button{
+    text-align: center;
+    align-self: stretch;
+    justify-content: stretch;
+    justify-self: stretch;
 }
 
 .details_section {
@@ -54,7 +66,7 @@ input {
     border-radius: 4px;
     padding: 10px;
     margin: 5px;
-    width: 80%;
+    width: 60%;
 }
 
 .gender_container > select{
