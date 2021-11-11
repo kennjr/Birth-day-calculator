@@ -12,10 +12,11 @@
         <div class="form_section">
             <h3>Find out the exact day you were born</h3>
             <div id="username_id">
+                <label for="name">Name : </label>
                 <input type="text" placeholder="Name">
             </div>
             <div id="date_of_birth_id">
-                <label for="birthday">Birthday:</label>
+                <label for="birthday">Birthday : </label>
                 <input type="date" name="birthday" id="user_birth_date" required>
             </div>
             <div id="gender_id" class="gender_container">
@@ -24,12 +25,12 @@
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="non_binary">Non-binary</option>
-                    
                 </select>
                     
             </div>
             <div class="button_class" id="btn_id">
-                <button type="submit">Submit</button>
+                <button id="reset_form_btn" type="reset">Clear</button>
+                <button id="submit_details_btn" type="submit">Submit</button>
             </div>
         </div>
         <div class="details_section">
