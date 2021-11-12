@@ -61,8 +61,18 @@ var getDayOfBirth = (birthdate) => {
 }
 
 var getAkanName = (gender, day) => {
+
+    const maleNames = new Array(7);
+    maleNames[0] = "Kwasi";
+    maleNames[1] = "Kwadwo";
+    maleNames[2] = "Kwabena";
+    maleNames[3] = "Kwaku";
+    maleNames[4] = "Yaw";
+    maleNames[5] = "Kofi";
+    maleNames[6] = "Kwame";
     /*\
 
+    
     MALE{
         Sunday: Kwasi
         Monday: Kwadwo
@@ -82,6 +92,15 @@ var getAkanName = (gender, day) => {
         Saturday: Ama
     }
     */
+    
+    const femaleNames = new Array(7);
+    femaleNames[0] = "Akosua";
+    femaleNames[1] = "Adwoa";
+    femaleNames[2] = "Abeena";
+    femaleNames[3] = "Akua";
+    femaleNames[4] = "Yaa";
+    femaleNames[5] = "Afua";
+    femaleNames[6] = "Ama";
     let akanName = "Unknown name";
 
     if(gender == "male"){
