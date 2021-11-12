@@ -1,8 +1,8 @@
 # Birth day calculator
-#### This is a web app that calculates the day someone was born, 11/11/2021
+#### This is a web app that calculates the day someone was born and gives them an Akan name, 11/11/2021
 #### By **Kennjr**
 ## Description
-This is a simple web application that performs the simple task of calculating the day someone was born with exceptional accuracy.
+This is a simple web application that performs the simple task of calculating the day someone was born with exceptional accuracy and giving them an Akan name(more info about Akan naming in the about section of the project).
 ## Setup/Installation Requirements
 * Clone the repo :{ git clone https://github.com/kennjr/Birth-day-calculator.git }
 * No server or dependencies needed to run the code.
