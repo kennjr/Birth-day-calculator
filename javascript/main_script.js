@@ -17,12 +17,14 @@ var submitDetails = () => {
 
 var calcualteBirth = (name, birthdate, gender) => {
     
-    getDayOfBirth(birthdate);
+    var dayOfBirth = getDayOfBirth(birthdate);
+    var AkanName = getAkanName(gender, dayOfBirth);
+
+    alert(name + " was born on a " + dayOfBirth + " and their Akan name is " + AkanName);
 }
 
 //This fun will give us the day of the week when the user was born based on the date given as an argument
-var getDayOfBirth = function (birthdate) {
-    console.log("We're calculating the day...");
+var getDayOfBirth = (birthdate) => {
     /*
     // Day of the week (d) = (((CC/4) -2*CC-1) + ((5*YY/4)) + ((26*(MM+1)/10)) + DD ) mod 7
     CC = century eg 19, 18, 17, 20 etc (the first 2 digits of the yyyy)
@@ -54,8 +56,91 @@ var getDayOfBirth = function (birthdate) {
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
     let day = weekday[date.getDay()];
-    alert("This user was born on the " + day + " day.");
-    
+    console.log("The day is ", day);
+    return day.toString()    
+}
+
+var getAkanName = (gender, day) => {
+    /*\
+
+    MALE{
+        Sunday: Kwasi
+        Monday: Kwadwo
+        Tuesday: Kwabena
+        Wednesday: Kwaku
+        Thursday:  Yaw
+        Friday: Kofi
+        Saturday: Kwame
+    }
+    FEMALE{
+        Sunday: Akosua
+        Monday: Adwoa
+        Tuesday: Abenaa
+        Wednesday: Akua
+        Thursday:  Yaa
+        Friday: Afua
+        Saturday: Ama
+    }
+    */
+    let akanName = "Unknown name";
+
+    if(gender == "male"){
+        switch (day) {
+            case "Sunday":
+                akanName = "Kwasi";
+                break;
+            case "Monday":
+                akanName = "Kwadwo";
+                break;
+            case "Tuesday":
+                akanName = "Kwabena";
+                break;
+            case "Wednesday":
+                akanName = "Kwaku";
+                break;
+            case "Thursday":
+                akanName = "Yaw";
+                break;
+            case "Friday":
+                akanName = "Kofi";
+                break;
+            case "Saturday":
+                akanName = "Kwame";
+                break;
+        
+            default:
+                break;
+        }
+    }else if(gender == "female"){
+        switch (day) {
+            case "Sunday":
+                akanName = "Akosua";
+                break;
+            case "Monday":
+                akanName = "Adwoa";
+                break;
+            case "Tuesday":
+                akanName = "Abenaa";
+                break;
+            case "Wednesday":
+                akanName = "Akua";
+                break;
+            case "Thursday":
+                akanName = "Yaa";
+                break;
+            case "Friday":
+                akanName = "Afua";
+                break;
+            case "Saturday":
+                akanName = "Ama";
+                break;
+        
+            default:
+                break;
+        }
+    }
+
+    return akanName.toString();
 }
 
 // This is the method that we'll use to get all the details from the form
