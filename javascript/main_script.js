@@ -19,8 +19,18 @@ var calcualteBirth = (name, birthdate, gender) => {
     
     var dayOfBirth = getDayOfBirth(birthdate);
     var AkanName = getAkanName(gender, dayOfBirth);
+    // This will give us the "word" day when the user was born
+    const weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    var day = weekday[dayOfBirth];
 
-    alert(name + " was born on a " + dayOfBirth + " and their Akan name is " + AkanName);
+    alert(name + " was born on a " + day + " and their Akan name is " + AkanName);
 }
 
 //This fun will give us the day of the week when the user was born based on the date given as an argument
@@ -46,18 +56,7 @@ var getDayOfBirth = (birthdate) => {
     console.log("cc is ", cc + " yy is ", yy);
 
     // var day = (((cc/4) -2*cc-1) + ((5*yy/4)) + ((26*(mm+1)/10)) + dd) % 7;
-
-    const weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
-    let day = weekday[date.getDay()];
-    console.log("The day is ", day);
-    return day.toString()    
+    return date.getDay()   
 }
 
 var getAkanName = (gender, day) => {
@@ -70,6 +69,27 @@ var getAkanName = (gender, day) => {
     maleNames[4] = "Yaw";
     maleNames[5] = "Kofi";
     maleNames[6] = "Kwame";
+    
+    const femaleNames = new Array(7);
+    femaleNames[0] = "Akosua";
+    femaleNames[1] = "Adwoa";
+    femaleNames[2] = "Abeena";
+    femaleNames[3] = "Akua";
+    femaleNames[4] = "Yaa";
+    femaleNames[5] = "Afua";
+    femaleNames[6] = "Ama";
+    let akanName = "Unknown name";
+
+    if(gender == "male"){        
+        akanName = maleNames[day];
+    }else if(gender == "female"){
+        akanName = femaleNames[day];
+    }
+
+    return akanName.toString();
+}
+
+var getAkanNameOld = (gender, dayString) => {
     /*\
 
     
@@ -92,19 +112,9 @@ var getAkanName = (gender, day) => {
         Saturday: Ama
     }
     */
-    
-    const femaleNames = new Array(7);
-    femaleNames[0] = "Akosua";
-    femaleNames[1] = "Adwoa";
-    femaleNames[2] = "Abeena";
-    femaleNames[3] = "Akua";
-    femaleNames[4] = "Yaa";
-    femaleNames[5] = "Afua";
-    femaleNames[6] = "Ama";
-    let akanName = "Unknown name";
 
     if(gender == "male"){
-        switch (day) {
+        switch (dayString) {
             case "Sunday":
                 akanName = "Kwasi";
                 break;
@@ -131,7 +141,7 @@ var getAkanName = (gender, day) => {
                 break;
         }
     }else if(gender == "female"){
-        switch (day) {
+        switch (dayString) {
             case "Sunday":
                 akanName = "Akosua";
                 break;
