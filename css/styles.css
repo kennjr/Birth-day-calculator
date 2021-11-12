@@ -23,28 +23,97 @@ button:hover{
     background: lightgray;
 }
 
-.flex_container{
-    display: flex;
-    height: 80vh;
-    align-items: center;
-    gap: 2rem;
+/* This is the media screen for a pc/laptop */
+@media screen 
+  and (min-width: 1200px) 
+  and (max-width: 1600px){
+    .flex_container{
+        display: flex;
+        height: 80vh;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    /* The form section */
+    .form_section {
+        background: lightgray;
+        flex: 5;
+        border: 1.5px solid grey;
+        border-radius: 10px;
+        display: flexbox;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .details_section {
+        /* background: chartreuse; */
+        flex: 7;
+        border: 1.5px solid transparent;
+        border-radius: 1px;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+/* This is the media screen for a phone */
+@media screen 
+  and (min-width: 360px) 
+  and (max-width: 880px){
+    .form_section {
+        background: lightgray;
+        width: 70%;
+        border: 1.5px solid grey;
+        border-radius: 10px;
+        display: flexbox;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .details_section {
+        /* background: chartreuse; */
+        width: 65%;
+        display: grid;
+        border: 1.5px solid transparent;
+        border-radius: 1px;
+        align-items:center;
+        justify-content: center;
+        place-items:center;
+    }
+}
+
+/* This is the media screen for a tablet */
+@media screen 
+  and (min-width: 880px) 
+  and (max-width: 1200px){
+    .form_section {
+        background: lightgray;
+        width: 70%;
+        border: 1.5px solid grey;
+        border-radius: 10px;
+        display: flexbox;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+    }
+    .details_section {
+        /* background: chartreuse; */
+        display: flexbox;
+        width: 65%;
+        border: 1.5px solid transparent;
+        border-radius: 1px;
+        justify-content: center;
+        
+    }
 }
 
 .gender_id {
     display: inline-block;
     width: 100%;
-}
-
-.form_section {
-    background: lightgray;
-    flex: 5;
-    border: 1.5px solid #111;
-    border-radius: 10px;
-    display: flexbox;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
 }
 
 .form_section > h3{
@@ -56,15 +125,6 @@ button:hover{
     align-self: stretch;
     justify-content: stretch;
     justify-self: stretch;
-}
-
-.details_section {
-    /* background: chartreuse; */
-    flex: 7;
-    border: 1.5px solid transparent;
-    border-radius: 1px;
-    align-content: center;
-    align-items: center;
 }
 
 input {
