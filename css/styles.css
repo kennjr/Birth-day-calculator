@@ -76,12 +76,13 @@ button:hover{
     .details_section {
         /* background: chartreuse; */
         width: 65%;
-        display: grid;
+        
         border: 1.5px solid transparent;
         border-radius: 1px;
         align-items:center;
         justify-content: center;
-        place-items:center;
+        
+        margin-bottom: 20px;
     }
 }
 
@@ -107,6 +108,7 @@ button:hover{
         border: 1.5px solid transparent;
         border-radius: 1px;
         justify-content: center;
+        margin-bottom: 20px;
         
     }
 }
